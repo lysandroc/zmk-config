@@ -1,6 +1,6 @@
 # Corne V3 — ZMK Config
 
-*A wireless, per‑key‑RGB, OLED‑equipped split keyboard powered by nice!nano v2*
+*A wireless, per‑key‑RGB, OLED‑equipped split keyboard powered by nice!nano v2 (compatibled)*
 
 [![Build](https://github.com/your‑github‑handle/zmk‑config/actions/workflows/build.yaml/badge.svg)](../../actions) 
 [![License](https://img.shields.io/github/license/your‑github‑handle/zmk‑config)](LICENSE) 
@@ -35,8 +35,6 @@ The firmware is built with **ZMK $Zephyr Mechanical Keyboard$** and provides:
 | Left (central)     | nice!nano v2 | Column 0‑5 → P1.06 … P1.15  <br/> Row 0‑3 → P0.13 … P0.16 <br/> OLED I²C → P0.02 / P0.03 <br/> RGB DIN → P0.28 (D4) |
 | Right (peripheral) | nice!nano v2 | Mirrored pins; identical wiring                                                                                     |
 
-> **Tip:** Exact PCB traces and footprints live in the `/pcb/` directory if you want to replicate the build.
-
 ---
 
 ## 🚀 Getting Started
@@ -44,8 +42,6 @@ The firmware is built with **ZMK $Zephyr Mechanical Keyboard$** and provides:
 ### 1. Install ZMK & init west
 
 https://zmk.dev/docs/user-setup
-
-```
 
 ### 2. Build firmware
 
@@ -61,10 +57,6 @@ west build -p -b nice_nano_v2 -d build/right -- -DSHIELD="corne_right nice_view_
 1. Double‑tap **RESET** on the MCU → it mounts as `NICENANO`.
 2. Copy `build/zephyr/zmk.uf2` onto the drive.
 3. Repeat for the other half.
-
-### 4. Factory reset (optional)
-
-Copy `settings‑reset.uf2` (in `/utils`) to each half once, then re‑flash normal firmware.
 
 ---
 
@@ -138,13 +130,6 @@ Detailed `.keymap` lives in `/config/corne.keymap` and is editable via **Keymap�
 * [ZMK Docs](https://zmk.dev/docs)
 * [Keymap Editor](https://nickcoutsos.github.io/keymap-editor)
 * [ZMK Studio](https://zmk.studio)
-* [nice!nano v2 Datasheet](https://nicekeyboards.com/nice-nano)
-
----
-
-## 📝 License
-
-This repo is licensed under the **MIT License** — see [LICENSE](LICENSE) for details.
 
 ---
 
