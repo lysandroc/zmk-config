@@ -7,48 +7,30 @@
     keymap {
         compatible = "zmk,keymap";
 
-        Typing {
+        default_layer {
             bindings = <
-                &kp TAB   &kp Q    &kp W    &kp E    &kp R    &kp T
-                &kp LSFT  &kp A    &kp S    &kp D    &kp F    &kp G
-                &kp LCTL  &kp Z    &kp X    &kp C    &kp V    &kp B
-                            &kp LALT &kp LGUI &kp RET
-            >,
-            <
-                &kp Y    &kp U    &kp I    &kp O     &kp P     &kp BSPC
-                &kp H    &kp J    &kp K    &kp L     &kp SEMI  &kp SQT
-                &kp N    &kp M    &kp COMMA &kp DOT  &kp SLASH &kp ESC
-                          &kp RET  &mo 1     &mo 2
+                &kp TAB   &kp Q    &kp W    &kp E    &kp R    &kp T   &kp Y    &kp U    &kp I     &kp O     &kp P     &kp BSPC
+                &kp LSFT  &kp A    &kp S    &kp D    &kp F    &kp G   &kp H    &kp J    &kp K     &kp L     &kp SEMI  &kp SQT
+                &kp LCTL  &kp Z    &kp X    &kp C    &kp V    &kp B   &kp N    &kp M    &kp COMMA &kp DOT   &kp SLASH &kp ESC
+                                    &kp LALT &kp LGUI &kp RET  &kp RET &mo 1    &mo 2
             >;
         };
 
-        Playing {
+        lower_layer {
             bindings = <
-                &kp N1    &kp N2     &kp N3     &kp N4         &kp N5         &rgb_ug_toggle
-                &kp LSFT  &rgb_sat_dec &rgb_sat_inc &rgb_ug_dec   &rgb_ug_inc   &rgb_ug_toggle
-                &kp LCTL  &none      &none      &none          &none          &none
-                              &kp LALT &kp LGUI &none
-            >,
-            <
-                &kp N6     &kp N7      &kp N8     &kp N9     &kp N0     &kp BSPC
-                &kp LEFT   &kp DOWN    &kp UP     &kp RIGHT  &none      &none
-                &none   &none &none &none  &none &none
-                               &none     &none     &mo 2
+                &kp N1    &kp N2       &kp N3       &kp N4       &kp N5         &rgb_ug_toggle   &kp N6     &kp N7      &kp N8     &kp N9     &kp N0     &kp BSPC
+                &kp LSFT  &rgb_sat_dec &rgb_sat_inc &rgb_ug_dec  &rgb_ug_inc    &rgb_ug_toggle   &kp LEFT   &kp DOWN    &kp UP     &kp RIGHT  &none      &none
+                &kp LCTL  &none        &none        &none        &none          &none            &none      &none       &none      &none      &none      &none
+                                                     &kp LALT     &kp LGUI       &none            &none      &trans      &mo 2
             >;
         };
 
-        Coding {
+        raise_layer {
             bindings = <
-                &kp GRAVE  &kp EXCLAMATION &kp AT     &kp HASH    &kp DLLR   &kp PERCENT
-                &kp LSFT   &kp N1          &kp N2     &kp N3      &kp N4     &kp N5
-                &kp LCTL   &none           &none      &none       &none      &none
-                             &kp LALT   &kp LGUI   &none
-            >,
-            <
-                &kp N6     &kp N7          &kp N8       &kp N9       &kp N0     &kp BSPC
-                &kp EQUAL  &kp EQUAL       &kp LBRC     &kp RBRC     &kp BSLASH &kp GRAVE
-                &kp MINUS  &kp MINUS       &kp LBKT     &kp RBKT     &none      &none
-                             &none       &none       &none
+                &kp GRAVE  &kp EXCLAMATION &kp AT     &kp HASH    &kp DLLR   &kp PERCENT   &kp N6     &kp N7          &kp N8       &kp N9       &kp N0     &kp BSPC
+                &kp LSFT   &kp N1          &kp N2     &kp N3      &kp N4     &kp N5        &kp EQUAL  &kp EQUAL       &kp LBRC     &kp RBRC     &kp BSLASH &kp GRAVE
+                &kp LCTL   &none           &none      &none       &none      &none         &kp MINUS  &kp MINUS       &kp LBKT     &kp RBKT     &none      &none
+                                                      &kp LALT     &kp LGUI   &none         &none      &none           &none
             >;
         };
     };
