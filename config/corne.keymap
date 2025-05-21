@@ -1,72 +1,54 @@
-/*
- * Copyright (c) 2020 The ZMK Contributors
- *
- * SPDX-License-Identifier: MIT
- */
-
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
 / {
-        keymap {
-                compatible = "zmk,keymap";
+    keymap {
+        compatible = "zmk,keymap";
 
-                default_layer {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BSPC |
-// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-//                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
-                        bindings = <
-   &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
-   &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
-                  &kp LGUI &mo 1 &kp SPACE   &kp RET &mo 2 &kp RALT
-                        >;
-                };
-                /*studio_unlock_layer {
-// -----------------------------------------------------------------------------------------
-// Layer dedicated to unlocking ZMK Studio. All keys are transparent except
-// the top‑left key, which issues the &studio_unlock behavior.
-//
-// |UNLCK|      |      |      |      |      |   |      |      |      |      |      |      |
-// |     |      |      |      |      |      |   |      |      |      |      |      |      |
-// |     |      |      |      |      |      |   |      |      |      |      |      |      |
-//                    |      |      |      |   |      |      |      |
-                        bindings = <
-   &studio_unlock &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &trans
-   &trans         &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &trans
-   &trans         &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &trans
-                   &trans &trans &trans   &trans &trans &trans
-                        >;
-                };*/
-                lower_layer {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BSPC |
-// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-// | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
-                        bindings = <
-   &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
-   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
-   &kp LSHFT  &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
-                                    &kp LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
-                        >;
-                };
-
-                raise_layer {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BSPC |
-// | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-// | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
-                        bindings = <
-   &kp  TAB  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR &kp BSPC
-   &kp LCTRL &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT &kp BSLH &kp GRAVE
-   &kp LSHFT &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC  &kp RBRC &kp PIPE &kp TILDE
-                             &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
-                        >;
-                };
+        Typing {
+            bindings = <
+                &kp TAB   &kp Q    &kp W    &kp E    &kp R    &kp T
+                &kp LSFT  &kp A    &kp S    &kp D    &kp F    &kp G
+                &kp LCTL  &kp Z    &kp X    &kp C    &kp V    &kp B
+                            &kp LALT &kp LGUI &kp RET
+            >,
+            <
+                &kp Y    &kp U    &kp I    &kp O     &kp P     &kp BSPC
+                &kp H    &kp J    &kp K    &kp L     &kp SEMI  &kp SQT
+                &kp N    &kp M    &kp COMMA &kp DOT  &kp SLASH &kp ESC
+                          &kp RET  &mo 1     &mo 2
+            >;
         };
+
+        Playing {
+            bindings = <
+                &kp N1    &kp N2     &kp N3     &kp N4         &kp N5         &rgb_ug_toggle
+                &kp LSFT  &rgb_sat_dec &rgb_sat_inc &rgb_ug_dec   &rgb_ug_inc   &rgb_ug_toggle
+                &kp LCTL  &none      &none      &none          &none          &none
+                              &kp LALT &kp LGUI &none
+            >,
+            <
+                &kp N6     &kp N7      &kp N8     &kp N9     &kp N0     &kp BSPC
+                &kp LEFT   &kp DOWN    &kp UP     &kp RIGHT  &kp C_BRIGHTNESS_UP  &kp C_BRIGHTNESS_DOWN
+                &kp MPRV   &kp PLAY_PAUSE &kp MNXT &kp MUTE  &kp VOLU             &kp VOLD
+                               &none     &none     &mo 2
+            >;
+        };
+
+        Coding {
+            bindings = <
+                &kp GRAVE  &kp EXCLAMATION &kp AT     &kp HASH    &kp DLLR   &kp PERCENT
+                &kp LSFT   &kp N1          &kp N2     &kp N3      &kp N4     &kp N5
+                &kp LCTL   &none           &none      &none       &none      &none
+                             &kp LALT   &kp LGUI   &none
+            >,
+            <
+                &kp N6     &kp N7          &kp N8       &kp N9       &kp N0     &kp BSPC
+                &kp EQUAL  &kp EQUAL       &kp LBRC     &kp RBRC     &kp BSLASH &kp GRAVE
+                &kp MINUS  &kp MINUS       &kp LBKT     &kp RBKT     &none      &none
+                             &none       &none       &none
+            >;
+        };
+    };
 };
