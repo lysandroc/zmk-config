@@ -1,6 +1,6 @@
 # Corne V3 — ZMK Config
 
-*A wireless, per‑key‑RGB, OLED‑equipped split keyboard powered by nice!nano v2 (compatibled)*
+*A wireless, per‑key‑RGB, OLED‑equipped split keyboard powered by nice!nano v2 (compatible)*
 
 [![Build](https://github.com/your‑github‑handle/zmk‑config/actions/workflows/build.yaml/badge.svg)](../../actions) 
 [![License](https://img.shields.io/github/license/your‑github‑handle/zmk‑config)](LICENSE) 
