@@ -1,0 +1,40 @@
+/*
+ * Copyright (c) 2020 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+
+/ {
+        keymap {
+                compatible = "zmk,keymap";
+
+        default_layer {
+            bindings = <
+                &kp TAB    &kp Q      &kp W      &kp E      &kp R      &kp T      &kp Y      &kp U      &kp I      &kp O      &kp P      &kp BSPC
+                &kp LSFT   &kp A      &kp S      &kp D      &kp F      &kp G      &kp H      &kp J      &kp K      &kp L      &kp SEMI   &kp APOSTROPHE
+                &kp LCTL   &kp Z      &kp X      &kp C      &kp V      &kp B      &kp N      &kp M      &kp COMMA  &kp DOT    &kp SLASH  &kp ESC
+                &kp LALT   &kp LGUI   &kp RET    &kp RET    &mo 1      &mo 2      &none      &none      &none      &none      &none      &none
+            >;
+        };
+        lower_layer {
+            bindings = <
+                &kp N1     &kp N2         &kp N3         &kp N4         &kp N5         &rgb_ug_toggle  &kp N6     &kp N7         &kp N8     &kp N9     &kp N0     &kp BSPC
+                &kp LSFT   &rgb_sat_dec   &rgb_sat_inc   &rgb_ug_dec    &rgb_ug_inc    &rgb_ug_toggle  &kp LEFT   &kp DOWN       &kp UP     &kp RIGHT  &kp C_BRIGHTNESS_INCREMENT &kp C_BRIGHTNESS_DECREMENT
+                &kp LCTL   &none          &none          &none          &none          &none           &kp MPRV   &kp PLAY_PAUSE &kp MNXT   &kp MUTE   &kp VOLU   &kp VOLD
+                &kp LALT   &kp LGUI       &none          &none          &mo 2          &none           &none      &none         &none      &none      &none      &none
+            >;
+        };
+        raise_layer {
+            bindings = <
+                &kp GRAVE  &kp EXCLAMATION &kp AT        &kp HASH      &kp DOLLAR    &kp PERCENT    &kp N6         &kp N7          &kp N8      &kp N9       &kp N0       &kp BSPC
+                &kp LSFT   &kp N1          &kp N2        &kp N3        &kp N4        &kp N5         &kp EQUAL      &kp EQUAL       &kp LBKT   &kp RBKT    &kp BSLH     &kp GRAVE
+                &kp LCTL   &none           &none         &none         &none         &none          &kp MINUS      &kp MINUS       &kp LBRC   &kp RBRC    &none        &none
+                &kp LALT   &kp LGUI        &none         &none         &none         &none          &none          &none           &none      &none      &none       &none
+            >;
+        };
+        };
+};
