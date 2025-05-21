@@ -31,7 +31,7 @@
             >,
             <
                 &kp N6     &kp N7      &kp N8     &kp N9     &kp N0     &kp BSPC
-                &kp LEFT   &kp DOWN    &kp UP     &kp RIGHT  &kp C_BRIGHTNESS_UP  &kp C_BRIGHTNESS_DOWN
+                &kp LEFT   &kp DOWN    &kp UP     &kp RIGHT  &none      &none
                 &kp MPRV   &kp PLAY_PAUSE &kp MNXT &kp MUTE  &kp VOLU             &kp VOLD
                                &none     &none     &mo 2
             >;
