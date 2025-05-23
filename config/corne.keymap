@@ -53,13 +53,13 @@
                 raise_layer {
 // -----------------------------------------------------------------------------------------
 // |   `~   |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BSPC |
-// | SHFT |     |     |     |     |     |   |  -  |  +  |  {  |  }  |  \  |     |
-// | CTRL |     |     |     |     |     |   |  _  |  =  |  [  |  ]  |     |      |
+// | SHFT |     |     |     |     |     |   |  _  |  =  |  {  |  }  |  \  |     |
+// | CTRL |     |     |     |     |     |   |  -  |  +  |  [  |  ]  |     |      |
 //                   | ALT | GUI | SPC |   | RET | MO1 | MO2 |
                         bindings = <
    &kp GRAVE &kp EXCL &kp AT   &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR &kp BSPC
-   &kp LSHFT &trans   &trans   &trans   &trans   &trans      &kp MINUS &kp PLUS  &kp LBRC  &kp RBRC &kp BSLH &trans
-   &kp LCTRL &trans   &trans   &trans   &trans   &trans      &kp UNDER &kp EQUAL &kp LBKT  &kp RBKT &trans   &trans
+   &kp LSHFT &trans   &trans   &trans   &trans   &trans      &kp UNDER &kp EQUAL &kp LBRC  &kp RBRC &kp BSLH &trans
+   &kp LCTRL &trans   &trans   &trans   &trans   &trans      &kp MINUS &kp PLUS  &kp LBKT  &kp RBKT &trans   &trans
                               &kp LALT &kp LGUI &kp SPACE    &kp RET   &mo 1     &mo 2
                         >;
                 };
