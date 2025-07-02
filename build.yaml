@@ -6,9 +6,11 @@ include:
     cmake-args: >-
       -DCONFIG_ZMK_STUDIO=y
       -DCONFIG_ZMK_STUDIO_LOCKING=n
+    config: corne_left.conf
 
   - board: nice_nano_v2
     shield: corne_right
+    config: corne_right.conf
   
   - board: nice_nano_v2
     shield: settings_reset
